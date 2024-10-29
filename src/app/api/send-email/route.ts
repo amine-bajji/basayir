@@ -34,14 +34,14 @@ export async function POST(req: NextRequest) {
     const transporter = nodemailer.createTransport({
       service: "Gmail",
       auth: {
-        user: gender === "male" ? process.env.EMAIL_BOY_USER : process.env.EMAIL_GIRL_USER,
-        pass: gender === "male" ? process.env.EMAIL_BOY_PASS : process.env.EMAIL_GIRL_PASS,
+        user:  process.env.EMAIL_BOY_USER,
+        pass:  process.env.EMAIL_BOY_PASS,
       },
     });
 
     // Email to applicant
     const applicantMailOptions = {
-      from: gender === "male" ? process.env.EMAIL_BOY_USER : process.env.EMAIL_GIRL_USER,
+      from: process.env.EMAIL_BOY_USER,
       to: email,
       subject: subject || "نادي بصائر",
       text: applicantMessage,
@@ -53,7 +53,7 @@ export async function POST(req: NextRequest) {
 
     // Email to organization
     const adminMailOptions = {
-      from: gender === "male" ? process.env.EMAIL_BOY_USER : process.env.EMAIL_GIRL_USER,
+      from: process.env.EMAIL_BOY_USER,
       to: gender === "male" ? process.env.EMAIL_BOY_USER : process.env.EMAIL_GIRL_USER,
       subject: `New Club Membership Application: ${firstName} ${lastName}`,
       text: adminMessage,

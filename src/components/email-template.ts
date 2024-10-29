@@ -20,10 +20,10 @@ const generateEmailContent = (name: string = '', message: string = '', isSender:
                     <!-- Content -->
                     <tr>
                         <td style="padding: 40px 30px;">
-                            <h1 style="color: #333; margin-bottom: 20px; font-size: 28px; font-weight: bold;">${name}</h1>
+                            <h1 style="color: #333; margin-bottom: 20px; font-size: 28px; font-weight: bold;">${name} مرحبا</h1>
                             <div style="background-color: #f9f9f9; border-radius: 8px; padding: 20px; margin-bottom: 30px; text-align: right;">
                                 <p style="color: #444; font-size: 18px; line-height: 1.6; margin: 0;">
-                                    ${message}مرحبا
+                                    ${message}
                                 </p>
                             </div>
                             ${isSender ? `
@@ -37,9 +37,7 @@ const generateEmailContent = (name: string = '', message: string = '', isSender:
                             <table role="presentation" style="width: 100%;">
                                 <tr>
                                     <td style="padding: 20px 0; text-align: center;">
-                                        <img src="https://basair.vercel.app/logo-basair.png" alt="Logo" style="max-width: 100px; height: auto; margin-bottom: 15px;">
                                         <div style="margin-top: 15px;">
-                                    
                                             <a href="https://www.instagram.com/basairclubndy/?igsh=MXV4ejB2OHBmb3pudA%3D%3D" style="text-decoration: none; margin: 0 10px; display: inline-block;">
                                                 <img src="https://basair.vercel.app/instagram.png" alt="instagram" style="width: 36px; height: 36px;">
                                             </a>
@@ -57,7 +55,7 @@ const generateEmailContent = (name: string = '', message: string = '', isSender:
                                 </tr>
                                 <tr>
                                     <td style="padding: 0 0 20px; text-align: center; color: #666; font-size: 14px;">
-                                        © 2023 نادي بصائر. جميع الحقوق محفوظة.
+                                        .© 2023 نادي بصائر. جميع الحقوق محفوظة
                                     </td>
                                 </tr>
                             </table>

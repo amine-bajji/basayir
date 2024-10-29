@@ -89,10 +89,7 @@ export default function JoinForm() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          to: formData.email,
-          subject: "تأكيد الانضمام لنادي بصائر",
-          firstName: formData.firstName,
-          gender:formData.gender 
+          ...formData
         }),
       });
       console.log("Email sent successfully");

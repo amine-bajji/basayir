@@ -55,7 +55,7 @@ const generateEmailContent = (name: string = '', message: string = '', isSender:
                                 </tr>
                                 <tr>
                                     <td style="padding: 0 0 20px; text-align: center; color: #666; font-size: 14px;">
-                                        .© 2023 نادي بصائر. جميع الحقوق محفوظة
+                                        .© 2023 نادي بصائر، جميع الحقوق محفوظة
                                     </td>
                                 </tr>
                             </table>

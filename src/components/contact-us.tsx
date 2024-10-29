@@ -45,8 +45,8 @@ export default function ContactUs() {
         body: JSON.stringify({
           from: formData.email,
           name: formData.name,
-          gender:formData.gender,// to identify the Team 
-          subject: " تواصل معنا : طلب استفسار",
+          gender:formData.gender,
+          subject: "تواصل معنا : طلب استفسار",
           message: formData.message,
         }),
       });

@@ -92,7 +92,7 @@ export default function JoinForm() {
           to: formData.email,
           subject: "تأكيد الانضمام لنادي بصائر",
           firstName: formData.firstName,
-          gender:formData.gender // to identify the Team
+          gender:formData.gender 
         }),
       });
       console.log("Email sent successfully");

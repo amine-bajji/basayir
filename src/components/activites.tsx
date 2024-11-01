@@ -35,7 +35,7 @@ export default function Activities() {
   return (
     <div className="w-full py-12">
       <TitleLayout title="أنشطة النادي" />
-      <div className="container mt-4 sm:flex sm:items-center sm:space-x-2 sm:space-x-reverse px-4 space-y-4 md:px-6">
+      <div className="container mt-8 sm:flex sm:items-center sm:space-x-2 sm:space-x-reverse px-4 space-y-4 md:px-6">
         <Carousel className="w-full max-w-xl lg:max-w-4xl mx-auto" dir="ltr">
           <CarouselContent>
             {events.map((event, index) => (

@@ -15,10 +15,6 @@ export default function FrequentlyAskedQuestions() {
       answer: `يتم فتح أبواب الترشيح كل سنة أمام الراغبين في تولي مهام تسيير النادي.`,
     },
     {
-      question: "هل توجد شروط معينة للانضمام للمكتب المسير؟",
-      answer: `نعم، باعتباره ناديا دعويا، يدعوا إلى الخير ويأمر بالمعروف، وينهى عن الفحشاء والمنكر، فلا بد لمن يقوم بهذا الدور أن يبدأ بنفسه أولا وأن يصلحها، وأن يتجنب الجهر بالمعاصي، وعليه أن يتحلى بحسن الخلق والرفق واللين...`,
-    },
-    {
       question: "هل في النادي مضيعة وقت؟",
       answer: `لا يطلب النادي من أعضائه القيام بأي شيء، ولا يكلفهم أي مهام، فكل شيء يقوم به أعضاء المكتب المسير ولجانه.`,
     },
@@ -43,9 +39,9 @@ export default function FrequentlyAskedQuestions() {
           </p>
         </div>
         <div className="mx-auto mt-12 max-w-3xl space-y-4 text-white">
-          <Accordion type="single" collapsible>
+          <Accordion type="single" collapsible className="space-y-2">
             {faqData.map((item, index) => (
-              <AccordionItem key={index} value={`item-${index + 1}`}>
+              <AccordionItem key={index} value={`item-${index + 1}`} className="border rounded-xl bg-white/30 backdrop-blur-sm p-2">
                 <AccordionTrigger>{item.question}</AccordionTrigger>
                 <AccordionContent>
                   <p>{item.answer}</p>

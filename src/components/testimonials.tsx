@@ -17,7 +17,7 @@ export default function Testimonials() {
       quote:
         "الحمد لله الذي وفقني للانضمام لمثل هذه النوادي عظيمة النفع، لقد تغيرت بفضل الله ثم بفضلها أهدافي، وحبب العلم الشرعي وأن أجمع بينه وبين مساري الأكاديمي، باعتبار تعلم الضروري منه فريضة. إن اختيار الصحبة الصالحة مهمة جدا، فهي معينة على تقوى الله، ومن يتق الله لا بد له أن يصل، وأن يتفوق أيضا في دراسته، وأما من اتبع سبيلا آخر فلا بد أن تضعف همته، وينسلخ عن دينه شيئا فشيئا، فنصيحتي لكم يا إخواني بالانضمام لهذا النادي، والحرص على نفع زملائكم، وأن لا تبخلوا، فهذه السنوات عابرة وكلنا سنعمل بإذن الله. واعلموا أن من مصائد الشيطان لترك النادي دعوى مضيعة الوقت، أو إساءة الظن بنا، فالله يبارك في وقت من يسارع للخير، فأحسنوا الظن بارك الله فيكم.\n\nقال الشيخ صالح بن عبدالعزيز آل الشيخ: الشاب، الكبير، الصغير، الرجل، المرأة، إذا كان بنفسه أتاه الشيطان، وأما إذا كان مع أصحاب له يُعينونه على الهدى، فهم جلاء القلب الذي يبعدون عنه الصدأ، ويجعلون الخير مُحبَّبًا إليه، ويجعلون الشرَّ مُبغَّضًا إليه.",
       name: "",
-      position: "عضو مؤسس، وطالب في السنة الأخيرة هندسة المعلوميات",
+      position: "عضو مؤسس",
       avatar: "/placeholder.svg?height=40&width=40",
     },
     {
@@ -32,7 +32,7 @@ export default function Testimonials() {
   return (
     <div className="w-full py-12">
       <TitleLayout title="كلمات وشهادات" />
-      <div className="container mt-4 sm:flex sm:items-center sm:space-x-2 sm:space-x-reverse px-4 space-y-4 md:px-6">
+      <div className="container mt-8 sm:flex sm:items-center sm:space-x-2 sm:space-x-reverse px-4 space-y-4 md:px-6">
         <Carousel className="w-full max-w-xl lg:max-w-4xl mx-auto" dir="ltr">
           <CarouselContent>
             {testimonials.map((testimonial, index) => (

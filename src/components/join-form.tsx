@@ -57,7 +57,8 @@ export default function JoinForm() {
     level: "",
     field: "",
     gender: "male",
-    motivation:''
+    motivation: '',
+    membershipType: "clubMember",
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
 
@@ -101,7 +102,7 @@ export default function JoinForm() {
 
   return (
     <Card className="w-full max-w-6xl mx-auto">
-      <CardHeader>
+      <CardHeader className="space-y-2">
         <CardTitle>انضم لنادي بصائر</CardTitle>
         <CardDescription>
           قم بملئ الاستمارة كاملة لكي تصبح عضوا في نادي بصائر
@@ -216,6 +217,26 @@ export default function JoinForm() {
               </div>
             </div>
           )}
+          <div className="space-y-2">
+            <Label>نوع العضوية</Label>
+            <RadioGroup
+              defaultValue={formData.membershipType}
+              required
+              dir="rtl"
+              onValueChange={(value) =>
+                setFormData((prev) => ({ ...prev, membershipType: value }))
+              }
+            >
+              <div className="flex items-center space-x-2 space-x-reverse">
+                <RadioGroupItem value="clubMember" id="clubMember" />
+                <Label htmlFor="clubMember">عضو في النادي</Label>
+              </div>
+              <div className="flex items-center space-x-2 space-x-reverse">
+                <RadioGroupItem value="boardMember" id="boardMember" />
+                <Label htmlFor="boardMember">عضو المكتب المسير</Label>
+              </div>
+            </RadioGroup>
+          </div>
 
           <div className="space-y-2">
             <Label>الجنس</Label>
@@ -238,7 +259,7 @@ export default function JoinForm() {
             </RadioGroup>
           </div>
           <div className="space-y-2">
-            <Label htmlFor="motivation">ما هو دافعك للانضمام إلى نادي بصائر؟</Label>
+            <Label htmlFor="motivation">ما هو دافعك للانضمام لنادي بصائر؟</Label>
             <Textarea
               id="motivation"
               className="focus-visible:ring-primary"
@@ -249,11 +270,11 @@ export default function JoinForm() {
               dir="rtl"
             />
           </div>
-          <CardFooter>
+    
             <Button type="submit" className="w-full">
               انضم الآن
             </Button>
-          </CardFooter>
+
           {/* Success message */}
           {formSubmitted && (
             <div className="flex items-center gap-3 rounded-md bg-green-50 p-4 dark:bg-green-900/10 mt-4">

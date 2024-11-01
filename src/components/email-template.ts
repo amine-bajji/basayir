@@ -27,7 +27,7 @@ const generateEmailContent = (name: string = '', message: string = '', isSender:
                                 </p>
                             </div>
                             ${isSender ? `
-                            <a href="https://basair.vercel.app" style="display: inline-block; background-color: #019f99; color: #ffffff; text-decoration: none; padding: 12px 24px; border-radius: 30px; font-size: 18px; font-weight: bold; transition: background-color 0.3s;">زيارة موقعنا</a>
+                            <a href="https://basayir.vercel.app" style="display: inline-block; background-color: #019f99; color: #ffffff; text-decoration: none; padding: 12px 24px; border-radius: 30px; font-size: 18px; font-weight: bold; transition: background-color 0.3s;">زيارة موقعنا</a>
                             ` : ''}
                         </td>
                     </tr>
@@ -36,25 +36,7 @@ const generateEmailContent = (name: string = '', message: string = '', isSender:
                         <td style="background-color: #f8f8f8; border-top: 1px solid #e0e0e0;">
                             <table role="presentation" style="width: 100%;">
                                 <tr>
-                                    <td style="padding: 20px 0; text-align: center;">
-                                        <div style="margin-top: 15px;">
-                                            <a href="https://www.instagram.com/basairclubndy/?igsh=MXV4ejB2OHBmb3pudA%3D%3D" style="text-decoration: none; margin: 0 10px; display: inline-block;">
-                                                <img src="https://basair.vercel.app/instagram.png" alt="instagram" style="width: 36px; height: 36px;">
-                                            </a>
-                                            <a href="https://web.facebook.com/profile.php?id=61564990312686" style="text-decoration: none; margin: 0 10px; display: inline-block;">
-                                                <img src="https://basair.vercel.app/facebook.png" alt="Facebook" style="width: 36px; height: 36px;">
-                                            </a>
-                                             <a href="https://whatsapp.com/channel/0029VaoJq9pJP2167dZn730K" style="text-decoration: none; margin: 0 10px; display: inline-block;">
-                                                <img src="https://basair.vercel.app/whatsapp.png" alt="whatsap" style="width: 36px; height: 36px;">
-                                            </a>
-                                             <a href="https://t.me/+G-B7d1hteuRhYWE0" style="text-decoration: none; margin: 0 10px; display: inline-block;">
-                                                <img src="https://basair.vercel.app/telegram.png" alt="telegram" style="width: 36px; height: 36px;">
-                                            </a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="padding: 0 0 20px; text-align: center; color: #666; font-size: 14px;">
+                                    <td style="padding: 20px 0; text-align: center; color: #666; font-size: 14px;">
                                         .© 2023 نادي بصائر، جميع الحقوق محفوظة
                                     </td>
                                 </tr>

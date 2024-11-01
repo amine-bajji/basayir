@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
         البريد الإلكتروني: ${email}<br/>
         الهاتف: ${phone}<br/>
         المستوى: ${level}<br/>
-        المجال: ${field}<br/>
+        التخصص: ${field}<br/>
         نوعية العضوية: ${membershipType === "clubMember" ? "عضو النادي" : "عضو المكتب المسير"}<br/>
         الجنس: ${gender === "male" ? "ذكر" : "أنثى"}<br/>
         الدافع: ${motivation}
@@ -42,8 +42,8 @@ export async function POST(req: NextRequest) {
     const transporter = nodemailer.createTransport({
       service: "Gmail",
       auth: {
-        user: process.env.EMAIL_BOY_USER,
-        pass: process.env.EMAIL_BOY_PASS,
+        user: gender === "male" ? process.env.EMAIL_BOY_USER : process.env.EMAIL_GIRL_USER,
+        pass: gender === "male" ? process.env.EMAIL_BOY_PASS : process.env.EMAIL_GIRL_PASS,
       },
     });
 
@@ -60,7 +60,7 @@ export async function POST(req: NextRequest) {
     };
 
       const adminMailOptions = {
-      from: process.env.EMAIL_BOY_USER,
+      from: gender === "male" ? process.env.EMAIL_BOY_USER : process.env.EMAIL_GIRL_USER,
       to: gender === "male" ? process.env.EMAIL_BOY_USER : process.env.EMAIL_GIRL_USER,
       subject: `طلب انضمام جديد للنادي: ${firstName} ${lastName}`,
       html: adminMessage,

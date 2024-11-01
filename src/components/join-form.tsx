@@ -81,7 +81,7 @@ export default function JoinForm() {
     }));
   };
 
-  const handleSubmit = async (event: React.FormEvent) => {
+   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     try {
       await fetch("/api/send-email", {
@@ -90,15 +90,31 @@ export default function JoinForm() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          ...formData
+          ...formData,
         }),
       });
       console.log("Email sent successfully");
+
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        level: "",
+        field: "",
+        gender: "male",
+        motivation: '',
+        membershipType: "clubMember",
+      });
       setFormSubmitted(true);
+      setTimeout(() => {
+        setFormSubmitted(false);
+      }, 3000); 
     } catch (error) {
       console.error("Error sending email:", error);
     }
   };
+
 
   return (
     <Card className="w-full max-w-6xl mx-auto">
@@ -229,7 +245,7 @@ export default function JoinForm() {
             >
               <div className="flex items-center space-x-2 space-x-reverse">
                 <RadioGroupItem value="clubMember" id="clubMember" />
-                <Label htmlFor="clubMember">عضو في النادي</Label>
+                <Label htmlFor="clubMember">عضو النادي</Label>
               </div>
               <div className="flex items-center space-x-2 space-x-reverse">
                 <RadioGroupItem value="boardMember" id="boardMember" />

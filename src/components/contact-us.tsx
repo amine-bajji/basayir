@@ -68,7 +68,7 @@ export default function ContactUs() {
             ممكن إن شاء الله.
           </p>
         </div>
-        <Card className="w-full  mx-auto p-4 lg:w-full">
+        <Card className="w-full mx-auto p-4 lg:w-2/3">
           <CardContent>
             <form className="grid gap-4" onSubmit={handleSubmit}>
               <div className="grid gap-2">

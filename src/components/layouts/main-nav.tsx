@@ -38,12 +38,7 @@ export function MainNav() {
         >
           تواصل معنا
         </Link>
-        <Link
-          href="/internal-regulation"
-          className="text-foreground/60 transition-colors hover:text-foreground"
-        >
-          قوانين داخلية
-        </Link>
+     
       </nav>
     </div>
   );

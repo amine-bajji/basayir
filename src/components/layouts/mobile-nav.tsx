@@ -1,17 +1,25 @@
+"use client";
+import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { AlignJustify } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function MobileNav() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div className="md:hidden">
-      <Sheet>
-        <SheetTrigger>
+      <Sheet open={isOpen} onOpenChange={setIsOpen}>
+        <SheetTrigger onClick={() => setIsOpen(!isOpen)}>
           <AlignJustify />
         </SheetTrigger>
         <SheetContent side="right">
-          <Link href="/">
+          <Link href="/" onClick={handleLinkClick}>
             <Image
               src="/logo-basair.png"
               alt="logo-basair"
@@ -21,14 +29,16 @@ export default function MobileNav() {
           </Link>
           <nav className="flex flex-col gap-3 lg:gap-4 mt-6">
             <Link
-              href="#about-section"
+              href="/#about-section"
               className="text-foreground/60 transition-colors hover:text-foreground"
+              onClick={handleLinkClick}
             >
               من نحن
             </Link>
             <Link
-              href="#activities-section"
+              href="/#activities-section"
               className="text-foreground/60 transition-colors hover:text-foreground"
+              onClick={handleLinkClick}
             >
               الأنشطة
             </Link>
@@ -37,21 +47,17 @@ export default function MobileNav() {
               className="text-foreground/60 transition-colors hover:text-foreground"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={handleLinkClick}
             >
               ملف النادي
             </Link>
             <Link
-              href="#contact-section"
+              href="/#contact-section"
               className="text-foreground/60 transition-colors hover:text-foreground"
+              onClick={handleLinkClick}
             >
               تواصل معنا
-            </Link>
-            <Link
-              href="/internal-regulation"
-              className="text-foreground/60 transition-colors hover:text-foreground"
-            >
-              قوانين داخلية
-            </Link>
+            </Link>        
           </nav>
         </SheetContent>
       </Sheet>

@@ -4,7 +4,6 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
-import CurvedUnderline from "./curved-underline";
 import TitleLayout from "./layouts/title-layout";
 import SvgDivider from "./svg-divider";
 
@@ -42,7 +41,7 @@ export default function FrequentlyAskedQuestions() {
           <Accordion type="single" collapsible className="space-y-2">
             {faqData.map((item, index) => (
               <AccordionItem key={index} value={`item-${index + 1}`} className="border rounded-xl bg-white/30 backdrop-blur-sm p-2">
-                <AccordionTrigger>{item.question}</AccordionTrigger>
+                <AccordionTrigger className="hover:no-underline">{item.question}</AccordionTrigger>
                 <AccordionContent>
                   <p>{item.answer}</p>
                 </AccordionContent>

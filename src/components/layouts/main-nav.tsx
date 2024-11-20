@@ -38,7 +38,6 @@ export function MainNav() {
         >
           تواصل معنا
         </Link>
-     
       </nav>
     </div>
   );

@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { buttonVariants } from "./ui/button";
 import HeroCards from "./hero-cards";
-import CurvedUnderline from "./curved-underline";
 import SvgDivider from "./svg-divider";
 
 export const Hero = () => {

@@ -1,5 +1,3 @@
-import Image from "next/image";
-import CurvedUnderline from "./curved-underline";
 import TitleLayout from "./layouts/title-layout";
 import {
   Card,
@@ -14,7 +12,7 @@ export default function Teams() {
   return (
     <section className="relative w-full bg-gradient-to-br from-primary to-black overflow-hidden">
       <SvgDivider position="top" />
-      <div className="mx-auto py-48 md:py-60">
+      <div className="mx-auto py-40 md:py-40">
         <div className="container px-4 md:px-6">
           <TitleLayout title="ننقسم إلى" textColor="text-white" />
           <div className="flex flex-col items-center space-y-4  mt-8 md:flex-row md:justify-center md:space-x-8 md:space-x-reverse md:space-y-0">

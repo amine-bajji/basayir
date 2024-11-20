@@ -10,6 +10,7 @@ import { Separator } from "@/components/ui/separator";
 import Activities from "@/components/activites";
 import { Hero } from "@/components/hero";
 import ContactUs from "@/components/contact-us";
+import ClubEventsSection from "@/components/events";
 
 export default function Home() {
   return (
